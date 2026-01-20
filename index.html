@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Museum of Silenced Voices | It’s Dark and Hell Is Hot</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      line-height: 1.7;
+      scroll-behavior: smooth;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 80px 15%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.85);
+      padding: 10px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #hero {
+      background: linear-gradient(to bottom, #0a3d62, #000);
+      color: white;
+      text-align: center;
+    }
+
+    #overview {
+      background: #f4f4f4;
+      color: #111;
+    }
+
+    #voice {
+      background: #1e272e;
+      color: #f1f1f1;
+    }
+
+    #artifacts {
+      background: #ffffff;
+      color: #111;
+    }
+
+    .artifact {
+      margin-bottom: 30px;
+    }
+
+    #hurston {
+      background: #0a3d62;
+      color: white;
+    }
+
+    #essay {
+      background: #000000;
+      color: #eaeaea;
+    }
+
+    footer {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+      .fade {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+    }
+
+    .label {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0,0,0,0.75);
+      color: white;
+      padding: 15px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .card:hover .label {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#hero">Home</a>
+  <a href="#overview">Overview</a>
+  <a href="#voice">Voice</a>
+  <a href="#artifacts">Artifacts</a>
+  <a href="#hurston">Hurston</a>
+  <a href="#essay">Essay</a>
+</nav>
+
+<section id="hero">
+  <h1>Still Speaking</h1>
+  <h2>Pain, Prayer, and Voice in <em>It’s Dark and Hell Is Hot</em></h2>
+  <p><strong>The Legacy of Zora Neale Hurston in the American Imagination</strong></p>
+</section>
+
+<section id="overview" class="fade">
+  <h2>Exhibit Overview</h2>
+  <p><em>It’s Dark and Hell Is Hot</em> represents a raw and confrontational debut in DMX’s artistic voice. Rejecting polished commercial personas, DMX centers pain, survival, faith, and inner conflict. This exhibit explores how DMX gives voice to working-class Black men whose anger, vulnerability, and spirituality are often dismissed or feared.</p>
+</section>
+
+<section id="voice" class="fade">
+  <h2>The Silenced Voice</h2>
+  <p>Black pain, anger, and spiritual conflict—particularly among working-class Black men—have often been criminalized or silenced in American culture. DMX challenges this erasure by presenting suffering and prayer side by side, insisting that vulnerability and faith can coexist with rage. Like Hurston, he refuses sanitized portrayals of Black life.
+</section>
+
+<section id="artifacts" class="fade">
+  <h2>Artifacts Gallery</h2>
+</section>
+
+<section class="fade" style="background:#6f1d1b;color:#f5f5f5;">
+  <h2>Artifact I: Album Cover — <em>It’s Dark and Hell Is Hot</em> (1998)</h2>
+  <img src="https://i.scdn.co/image/ab67616d0000b273f1cfc11b28c2839dae35169f" style="max-width:300px">
+  <p>The album cover of It's Dark and Hell is Hot (1998) showcases the emotional turmoil of DMX and his long awaited debut. The devil-tailed lettering showcases his internal struggle of faith vs despair, reflecting the lived experiences of many black men who were navigating trauma and guilt of the late 90s. The blood stained image brings a new perspective to viewers and listeners that reject material and earthly possessions, a theme that mainstream hip-hop was pushing. The cover rebukes stereotypes that reduced marginalized black men to either violent gang members or wasted beggars on the street. </p>
+</section>
+
+<section class="fade" style="background:#1b4332;color:#e9f5ec;">
+  <h2>Artifact II: "Damien" Pt. I, II, III</h2>
+  <p>The Damien Trilogy shows DMX having a conversation with a demonic character represented by Damien, symbolizing temptation and moral struggle between sin and faith. The song gives voice to marginalized black men who navigate trauma and mental warfare on a daily basis. The track challenges stereotypes that portray black men as tough and violent, rather suggesting that inner vulnerability and faith in God are central to fighting temptation and the devil.  </p>
+  <audio controls data-autoplay style="width:100%">
+    <source src="audio/Damien_Trilogy_DMX.mp3" type="audio/mpeg">
+  </audio>
+</section>
+
+<section class="fade" style="background:#3a0ca3;color:#f1f1f1;">
+  <h2>Artifact III: “Damien”</h2>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Dark_alley_night.jpg" style="max-width:400px">
+  <p>In “Damien,” DMX externalizes moral conflict as a conversation with temptation. This narrative technique humanizes struggle rather than flattening it into criminality. Like Hurston’s use of storytelling, it gives form to inner voice.</p>
+  <audio controls data-autoplay style="width:100%">
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" type="audio/mpeg">
+  </audio>
+</section>
+
+<section class="fade" style="background:#03045e;color:#eaeaea;">
+  <h2>Artifact IV: “Slippin’”</h2>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Chain_link_fence_shadow.jpg" style="max-width:400px">
+  <p>“Slippin’” exposes cycles of addiction, incarceration, and survival. DMX’s emotional honesty resists stereotypes equating masculinity with silence. The song insists that reflection and vulnerability are forms of strength.</p>
+  <audio controls data-autoplay style="width:100%">
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" type="audio/mpeg">
+  </audio>
+</section>
+
+<section id="hurston" class="fade">
+  <h2>Connection to Zora Neale Hurston</h2>
+  <p>Zora Neale Hurston preserved Black Southern life through dialect, folklore, and everyday experience. DMX uses gospel and confession to reclaim spiritual identity. Both artists resist dominant narratives and insist on self-defined voice.</p>
+</section>
+
+<section id="essay" class="fade">
+  <h2>Curator's Essay (Excerpt)</h2>
+  <p>In <em>Their Eyes Were Watching God</em> and <em>It’s Dark and Hell Is Hot</em>, Hurston and DMX use different mediums to restore marginalized voices. Hurston centers Janie’s journey toward self-definition, while DMX emphasizes inner transformation through faith. Both preserve culture, challenge stereotypes, and insist on complexity.</p>
+</section>
+
+<footer>
+  <p>Museum of Silenced Voices — Curated Exhibit</p>
+</footer>
+
+<script>
+  const faders = document.querySelectorAll('.fade');
+  const audios = document.querySelectorAll('audio[data-autoplay]');
+
+  const appearOptions = {
+    threshold: 0.4
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      // Fade logic
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+
+      // Audio logic (only if section contains audio)
+      const audio = entry.target.querySelector && entry.target.querySelector('audio[data-autoplay]');
+      if (audio) {
+        if (entry.isIntersecting) {
+          audio.play().catch(() => {});
+        } else {
+          audio.pause();
+          audio.currentTime = 0;
+        }
+      }
+    });
+  }, appearOptions);
+
+  faders.forEach(section => observer.observe(section));
+</script>
+</body>
+</html>
