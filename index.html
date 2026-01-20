@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Museum of Silenced Voices | It’s Dark and Hell Is Hot</title>
+  <title>Museum of Silenced Voices | DMX</title>
   <style>
     body {
       margin: 0;
@@ -16,9 +16,6 @@
       min-height: 100vh;
       padding: 80px 15%;
       box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
     }
 
     h1, h2 {
@@ -46,6 +43,10 @@
       background: linear-gradient(to bottom, #0a3d62, #000);
       color: white;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     #overview {
@@ -61,10 +62,6 @@
     #artifacts {
       background: #ffffff;
       color: #111;
-    }
-
-    .artifact {
-      margin-bottom: 30px;
     }
 
     #hurston {
@@ -83,7 +80,8 @@
       text-align: center;
       padding: 20px;
     }
-      .fade {
+
+    .fade {
       opacity: 0;
       transform: translateY(30px);
       transition: all 1s ease;
@@ -124,6 +122,41 @@
     .card:hover .label {
       opacity: 1;
     }
+
+    /* FLEXBOX FOR ARTIFACTS */
+    .flex-responsive {
+      display: flex;
+      flex-direction: column; /* Mobile first */
+      gap: 30px;
+    }
+
+    .flex-responsive img {
+      max-width: 300px;
+      border-radius: 8px;
+      align-self: center;
+    }
+
+    @media (min-width: 900px) {
+      .flex-responsive {
+        flex-direction: row; /* Desktop layout */
+        align-items: center;
+      }
+      .flex-responsive img {
+        align-self: unset;
+      }
+    }
+
+    /* Optional: reverse layout for alternating artifacts */
+    @media (min-width: 900px) {
+      .reverse {
+        flex-direction: row-reverse;
+      }
+    }
+
+    /* Audio full width */
+    audio {
+      width: 100%;
+    }
   </style>
 </head>
 <body>
@@ -133,24 +166,22 @@
   <a href="#overview">Overview</a>
   <a href="#voice">Voice</a>
   <a href="#artifacts">Artifacts</a>
-  <a href="#hurston">Hurston</a>
-  <a href="#essay">Essay</a>
 </nav>
 
 <section id="hero">
   <h1>Still Speaking</h1>
-  <h2>Pain, Prayer, and Voice in <em>It’s Dark and Hell Is Hot</em></h2>
-  <p><strong>The Legacy of Zora Neale Hurston in the American Imagination</strong></p>
+  <h2>Pain, Prayer, and Voice Through DMX</h2>
+  <p><strong>The legacy of DMX in the late 90s to now</strong></p>
 </section>
 
 <section id="overview" class="fade">
   <h2>Exhibit Overview</h2>
-  <p><em>It’s Dark and Hell Is Hot</em> represents a raw and confrontational debut in DMX’s artistic voice. Rejecting polished commercial personas, DMX centers pain, survival, faith, and inner conflict. This exhibit explores how DMX gives voice to working-class Black men whose anger, vulnerability, and spirituality are often dismissed or feared.</p>
+  <p>This exhibit explores how DMX gives voice to working-class Black men whose anger, vulnerability, and spirituality are often dismissed or feared.</p>
 </section>
 
 <section id="voice" class="fade">
   <h2>The Silenced Voice</h2>
-  <p>Black pain, anger, and spiritual conflict—particularly among working-class Black men—have often been criminalized or silenced in American culture. DMX challenges this erasure by presenting suffering and prayer side by side, insisting that vulnerability and faith can coexist with rage. Like Hurston, he refuses sanitized portrayals of Black life.
+  <p>Black pain, anger, and spiritual conflict have often been criminalized or silenced in American culture. DMX challenges this erasure by presenting suffering and prayer side by side, insisting that vulnerability and faith can coexist with rage.</p>
 </section>
 
 <section id="artifacts" class="fade">
@@ -158,49 +189,54 @@
 </section>
 
 <section class="fade" style="background:#6f1d1b;color:#f5f5f5;">
-  <h2>Artifact I: Album Cover — <em>It’s Dark and Hell Is Hot</em> (1998)</h2>
-  <img src="https://i.scdn.co/image/ab67616d0000b273f1cfc11b28c2839dae35169f" style="max-width:300px">
-  <p>The album cover of It's Dark and Hell is Hot (1998) showcases the emotional turmoil of DMX and his long awaited debut. The devil-tailed lettering showcases his internal struggle of faith vs despair, reflecting the lived experiences of many black men who were navigating trauma and guilt of the late 90s. The blood stained image brings a new perspective to viewers and listeners that reject material and earthly possessions, a theme that mainstream hip-hop was pushing. The cover rebukes stereotypes that reduced marginalized black men to either violent gang members or wasted beggars on the street. </p>
+  <div class="flex-responsive">
+    <img src="https://i.scdn.co/image/ab67616d0000b273f1cfc11b28c2839dae35169f">
+    <div>
+      <h2>Artifact I: Album Cover — <em>It’s Dark and Hell Is Hot</em> (1998)</h2>
+      <p>The album cover of It's Dark and Hell is Hot (1998) showcase the emotional turmoil of DMX and his long awaited debut. The devil-tailed lettering showcases his internal struggle of faith vs despair, reflecting the lived experiences of many black men who were navigating trauma and guilt of the late 90s. The blood stained image brings a new perspective to viewers and listeners that reject material and earthly possessions, a theme that mainstream hip-hop was pushing. The cover rebukes stereotypes that reduced marginalized black men to either violent gang members or wasted beggars on the street. </p>
+    </div>
+  </div>
 </section>
 
 <section class="fade" style="background:#1b4332;color:#e9f5ec;">
-  <h2>Artifact II: "Damien" Pt. I, II, III</h2>
-  <p>The Damien Trilogy shows DMX having a conversation with a demonic character represented by Damien, symbolizing temptation and moral struggle between sin and faith. The song gives voice to marginalized black men who navigate trauma and mental warfare on a daily basis. The track challenges stereotypes that portray black men as tough and violent, rather suggesting that inner vulnerability and faith in God are central to fighting temptation and the devil.  </p>
-  <audio controls data-autoplay style="width:100%">
-    <source src="audio/Damien_Trilogy_DMX.mp3" type="audio/mpeg">
-  </audio>
+  <div class="flex-responsive reverse">
+    <div>
+      <h2>Artifact II: "Damien" Pt. I, II, III (1998-2001)</h2>
+      <p>The Damien Trilogy shows DMX having a conversation with a demonic character represented by Damien, symbolizing temptation and moral struggle between sin and faith. The song gives voice to marginalized black men who navigate trauma and mental warfare on a daily basis. The track challenges stereotypes that portray black men as tough and violent, rather suggesting that inner vulnerability and faith in God are central to fighting temptation and the devil.  </p>
+      <audio controls data-autoplay>
+        <source src="audio/Damien_Trilogy_DMX.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
 </section>
 
 <section class="fade" style="background:#3a0ca3;color:#f1f1f1;">
-  <h2>Artifact III: “Damien”</h2>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Dark_alley_night.jpg" style="max-width:400px">
-  <p>In “Damien,” DMX externalizes moral conflict as a conversation with temptation. This narrative technique humanizes struggle rather than flattening it into criminality. Like Hurston’s use of storytelling, it gives form to inner voice.</p>
-  <audio controls data-autoplay style="width:100%">
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" type="audio/mpeg">
-  </audio>
+  <div class="flex-responsive">
+    <div>
+      <h2>Artifact III: “Prayers” (1998-2021)</h2>
+      <p>DMX is well known for openly praying at his concerts, showcasing his unique voice and style of vulnerability in his conversation with the Lord. These prayers represent the lived experience of many black men, torn between faith, humility, violence, and ego. Through openly praying in front of hundreds of thousands, DMX's prayers reject stereotypes for black men that strength comes from aggression and volume, rather than openness and vulnerability with God.</p>
+      <audio controls data-autoplay>
+        <source src="audio/The_Prayer_IV.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
 </section>
 
 <section class="fade" style="background:#03045e;color:#eaeaea;">
-  <h2>Artifact IV: “Slippin’”</h2>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Chain_link_fence_shadow.jpg" style="max-width:400px">
-  <p>“Slippin’” exposes cycles of addiction, incarceration, and survival. DMX’s emotional honesty resists stereotypes equating masculinity with silence. The song insists that reflection and vulnerability are forms of strength.</p>
-  <audio controls data-autoplay style="width:100%">
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" type="audio/mpeg">
-  </audio>
-</section>
-
-<section id="hurston" class="fade">
-  <h2>Connection to Zora Neale Hurston</h2>
-  <p>Zora Neale Hurston preserved Black Southern life through dialect, folklore, and everyday experience. DMX uses gospel and confession to reclaim spiritual identity. Both artists resist dominant narratives and insist on self-defined voice.</p>
-</section>
-
-<section id="essay" class="fade">
-  <h2>Curator's Essay (Excerpt)</h2>
-  <p>In <em>Their Eyes Were Watching God</em> and <em>It’s Dark and Hell Is Hot</em>, Hurston and DMX use different mediums to restore marginalized voices. Hurston centers Janie’s journey toward self-definition, while DMX emphasizes inner transformation through faith. Both preserve culture, challenge stereotypes, and insist on complexity.</p>
+  <div class="flex-responsive reverse">
+    <div>
+      <h2>Artifact IV: "Lord Give Me A Sign" (2006)</h2>
+      <p>Through "Lord Give Me A Sign", DMX is having a conversation with God, rebuking the devil and asking the Lord for guidance and strength while amidst personal struggles with his faith. The song represents experiences that black men face on the daily, struggling to keep their faith in a society that labels them as gangsters. The song rejects stereotypes that black men are linked to, as they are often labeled as thugs and criminals, instead shedding light and rejecting that narrative through faith and vulnerability. 
+      </p>
+      <audio controls data-autoplay>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
 </section>
 
 <footer>
-  <p>Museum of Silenced Voices — Curated Exhibit</p>
+  <p>Museum of Silenced Voices — DMX</p>
 </footer>
 
 <script>
@@ -220,7 +256,7 @@
         entry.target.classList.remove('visible');
       }
 
-      // Audio logic (only if section contains audio)
+      // Audio logic
       const audio = entry.target.querySelector && entry.target.querySelector('audio[data-autoplay]');
       if (audio) {
         if (entry.isIntersecting) {
